@@ -2019,7 +2019,7 @@ pre code {
   clear: both;
 }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .wrapper-single-page .container .post-content-single, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -2235,7 +2235,7 @@ pre code {
 }
 
 @media (min-width: 768px) {
-  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .wrapper-single-page .container .post-content-single, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
     float: left;
   }
   .col-sm-1 {
@@ -2259,7 +2259,7 @@ pre code {
   .col-sm-7 {
     width: 58.33333%;
   }
-  .col-sm-8 {
+  .col-sm-8, .wrapper-single-page .container .post-content-single {
     width: 66.66667%;
   }
   .col-sm-9 {
@@ -10469,6 +10469,241 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+/**
+ * prism.js Coy theme for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/tshedor/workshop-wp-theme (Example: http://workshop.kansan.com/category/sessions/basics or http://workshop.timshedor.com/category/sessions/basics);
+ * @author Tim  Shedor
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: black;
+  background: none;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  position: relative;
+  margin: .5em 0;
+  -webkit-box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
+  -moz-box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
+  box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
+  border-left: 10px solid #358ccb;
+  background-color: #fdfdfd;
+  background-image: -webkit-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+  background-image: -moz-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+  background-image: -ms-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+  background-image: -o-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+  background-image: linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+  background-size: 3em 3em;
+  background-origin: content-box;
+  overflow: visible;
+  padding: 0;
+}
+
+code[class*="language"] {
+  max-height: inherit;
+  height: 100%;
+  padding: 0 1em;
+  display: block;
+  overflow: auto;
+}
+
+/* Margin bottom to accomodate shadow */
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background-color: #fdfdfd;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 1em;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  position: relative;
+  padding: .2em;
+  -webkit-border-radius: 0.3em;
+  -moz-border-radius: 0.3em;
+  -ms-border-radius: 0.3em;
+  -o-border-radius: 0.3em;
+  border-radius: 0.3em;
+  color: #c92c2c;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: inline;
+  white-space: normal;
+}
+
+pre[class*="language-"]:before,
+pre[class*="language-"]:after {
+  content: '';
+  z-index: -2;
+  display: block;
+  position: absolute;
+  bottom: 0.75em;
+  left: 0.18em;
+  width: 40%;
+  height: 20%;
+  max-height: 13em;
+  -webkit-box-shadow: 0px 13px 8px #979797;
+  -moz-box-shadow: 0px 13px 8px #979797;
+  box-shadow: 0px 13px 8px #979797;
+  -webkit-transform: rotate(-2deg);
+  -moz-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  -o-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+}
+
+:not(pre) > code[class*="language-"]:after,
+pre[class*="language-"]:after {
+  right: 0.75em;
+  left: auto;
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #7D8B99;
+}
+
+.token.punctuation {
+  color: #5F6364;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.function-name,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #c92c2c;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.function,
+.token.builtin,
+.token.inserted {
+  color: #2f9c0a;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.token.variable {
+  color: #a67f59;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword,
+.token.class-name {
+  color: #1990b8;
+}
+
+.token.regex,
+.token.important {
+  color: #e90;
+}
+
+.language-css .token.string,
+.style .token.string {
+  color: #a67f59;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.token.important {
+  font-weight: normal;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.namespace {
+  opacity: .7;
+}
+
+@media screen and (max-width: 767px) {
+  pre[class*="language-"]:before,
+  pre[class*="language-"]:after {
+    bottom: 14px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+}
+
+/* Plugin styles */
+.token.tab:not(:empty):before,
+.token.cr:before,
+.token.lf:before {
+  color: #e0d7d1;
+}
+
+/* Plugin styles: Line Numbers */
+pre[class*="language-"].line-numbers {
+  padding-left: 0;
+}
+
+pre[class*="language-"].line-numbers code {
+  padding-left: 3.8em;
+}
+
+pre[class*="language-"].line-numbers .line-numbers-rows {
+  left: 0;
+}
+
+/* Plugin styles: Line Highlight */
+pre[class*="language-"][data-line] {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+}
+
+pre[data-line] code {
+  position: relative;
+  padding-left: 4em;
+}
+
+pre .line-highlight {
+  margin-top: 0;
+}
+
 .srt {
   border: 0;
   clip: rect(0 0 0 0);
@@ -14055,7 +14290,7 @@ em.selectedText {
 }
 
 .site-content .posts-section {
-  background: #78909C;
+  background: #f5f5f5;
   border-radius: 5px;
   width: 100%;
   min-height: 100vh;
@@ -14238,6 +14473,132 @@ em.selectedText {
   padding: 0;
 }
 
+.single-title {
+  color: #78909C;
+  border-bottom: 2px solid #78909C;
+  border-top: 2px solid #78909C;
+  height: 100%;
+  font-weight: 600;
+  font-family: serif;
+}
+
+.nav-li a {
+  height: 100%;
+}
+
+.nav-like-section {
+  height: 50px;
+  background-color: #FAFAFA;
+  width: 100%;
+  position: fixed;
+  top: 50px;
+  border-bottom: 1px solid lightgray;
+  z-index: 3;
+}
+
+.nav-like-section .breadcrumb {
+  margin-bottom: 5px;
+  margin-top: 8px;
+  background-color: #FAFAFA;
+}
+
+.nav-like-section .breadcrumb li a {
+  color: grey;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-like-section p {
+  margin: 10px 0;
+  color: grey;
+  font-size: 18px;
+  font-family: serif;
+}
+
+.nav-like-section p button {
+  width: 90px;
+}
+
+.wrapper-single-page {
+  min-height: 100%;
+  background-color: #f3f3f3;
+  position: absolute;
+  top: 102px;
+  width: 100%;
+}
+
+.wrapper-single-page .container {
+  background-color: white;
+  min-height: 100vh;
+  z-index: 1;
+}
+
+.wrapper-single-page .container .post-title-section h1 {
+  color: #777777;
+  margin: 0;
+  padding: 15px;
+  background-color: #efecec;
+  border-right: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  font-family: serif;
+}
+
+.wrapper-single-page .container .post-content-single {
+  min-height: 100vh;
+  background-color: #f8f8f8;
+}
+
+.wrapper-single-page .container .post-content-single .image-center-post {
+  width: 100%;
+  height: 300px;
+}
+
+.wrapper-single-page .container .post-content-single iframe {
+  width: 100%;
+  height: 350px;
+  margin-top: 10px;
+}
+
+.wrapper-single-page .container .post-content-single .image-thumbnail-single {
+  margin-top: 10px;
+  width: 100%;
+  max-height: 300px;
+}
+
+.wrapper-single-page .container .post-content-single h1, .wrapper-single-page .container .post-content-single h2, .wrapper-single-page .container .post-content-single h3, .wrapper-single-page .container .post-content-single h4, .wrapper-single-page .container .post-content-single h5, .wrapper-single-page .container .post-content-single h6 {
+  margin: 25px 0 15px 0;
+  color: cadetblue;
+  border-bottom: 1px solid gray;
+  padding: 12px 0 12px 8px;
+  border-top: 1px solid gray;
+  border-left: 1px solid lightgray;
+}
+
+.wrapper-single-page .container .post-content-single .two-images-single {
+  width: 50%;
+  height: auto;
+  padding-left: 0;
+  padding-right: 4px;
+}
+
+.wrapper-single-page .container .post-content-single img {
+  margin-bottom: 10px;
+}
+
+.wrapper-single-page .container .sidebar {
+  min-height: 100vh;
+  background-color: aliceblue;
+}
+
+@media (max-width: 400px) {
+  .btn-like-dislike {
+    display: none;
+  }
+  .nav-like-section button {
+    width: auto !important;
+  }
+}
+
 @media (max-width: 767px) {
   .header-wrap {
     display: none;
@@ -14262,6 +14623,24 @@ em.selectedText {
   .post-content {
     margin-left: 0 !important;
     margin-right: 0 !important;
+  }
+  .nav-like-section .col-xs-6 {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .nav-like-section .breadcrumb {
+    padding: 8px 0px;
+  }
+  .single_post_page .nav-li a {
+    border: none !important;
+    border-bottom: 1px solid white !important;
+  }
+}
+
+@media (min-width: 767px) {
+  .nav-like-section .col-xs-6 {
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 

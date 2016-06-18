@@ -15,16 +15,8 @@
     <?php
     $category =  get_the_category();
 
-    $args = array(
-        'type'                     => 'post',
-        'child_of'                 => 0,
-        'orderby'                  => 'name',
-        'order'                    => 'ASC',
-        'hide_empty'               => 0,
-        'taxonomy'                 => 'category',
-        'exclude'                  =>array(1)
-    );
-    $categories = get_categories( $args );
+    $categories = get_all_categories();
+
     $menu_list = '';
     if( empty( $category ) ){
         $menu_list .= '<li class="active"> All </li>';

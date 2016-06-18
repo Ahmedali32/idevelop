@@ -56,3 +56,20 @@ function get_category_color($cat){
     $color = get_option( "cat_color_$cat" );
     return $color ;
 }
+
+/**
+ * get all categories in the site
+ * @return array
+ */
+function get_all_categories(){
+    $args = array(
+        'type'                     => 'post',
+        'child_of'                 => 0,
+        'orderby'                  => 'name',
+        'order'                    => 'ASC',
+        'hide_empty'               => 0,
+        'taxonomy'                 => 'category',
+        'exclude'                  =>array(1)
+    );
+    return $categories = get_categories( $args );
+}
