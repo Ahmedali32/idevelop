@@ -1,0 +1,4 @@
+// Rem Functions
+@function rem($target, $context: $font-size-base) {
+	@return ($target / $context) * 1rem;
+}

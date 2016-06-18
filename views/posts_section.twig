@@ -1,0 +1,10 @@
+<input type="hidden" value="{{ loaded_posts }}" id="loaded_posts" />
+<input type="hidden" value="{{ category }}" id="category_available" />
+<input type="hidden" id="send_ajax" value="{{ link_ajax }}" />
+<div class="row posts_inner_row">
+    {% for posts_chunk in posts %}
+            {% for post in posts_chunk %}
+                {% include 'single_post_inposts_section.twig' %}
+            {% endfor %}
+    {% endfor %}
+</div>

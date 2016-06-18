@@ -1,0 +1,33 @@
+@import 'lib/fontawesome';
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('#{$fonts-path}/OpenSans/OpenSans-Light.eot?#iefix') format('embedded-opentype'),
+		url('#{$fonts-path}/OpenSans/OpenSans-Light.woff') format('woff'),
+		url('#{$fonts-path}/OpenSans/OpenSans-Light.ttf')  format('truetype');
+  font-weight:300;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('#{$fonts-path}/OpenSans/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+		url('#{$fonts-path}/OpenSans/OpenSans-Regular.woff') format('woff'),
+		url('#{$fonts-path}/OpenSans/OpenSans-Regular.ttf')  format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('#{$fonts-path}/OpenSans/OpenSans-Semibold.eot?#iefix') format('embedded-opentype'),
+		url('#{$fonts-path}/OpenSans/OpenSans-Semibold.woff') format('woff'), 
+		url('#{$fonts-path}/OpenSans/OpenSans-Semibold.ttf')  format('truetype'); 
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('#{$fonts-path}/OpenSans/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+		url('#{$fonts-path}/OpenSans/OpenSans-Bold.woff') format('woff'),
+		url('#{$fonts-path}/OpenSans/OpenSans-Bold.ttf')  format('truetype');
+  font-weight: 700;
+}

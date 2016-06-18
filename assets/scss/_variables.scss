@@ -1,0 +1,44 @@
+// Fonts & Images Path
+$fonts-path: "assets/fonts" !default;
+$images-path: "assets/images" !default;
+
+// Font Awesome Variables
+$fa-font-path: "assets/fonts/fontawesome" !default;
+
+// Colors
+
+$light-gray: #fafcfc;
+$dark-green: #2f4050;
+$gray: #f3f3f5;
+
+$primary-color: #ffffff;
+$secondary-color: #f89c1d;
+$buttons-color: #e74c3c;
+$border-colors: #e6e6e6;
+$headings-color: #212121;
+$headings-color-blue: #00529b;
+
+
+/*$screen-sm-min: 992px;*/
+/*$screen-md-min: 992px;*/
+/*$grid-float-breakpoint: 992px;*/
+
+
+// Typography
+// Body color, base font size and family 
+
+$base-color: #ffffff;
+$font-size-base: 15px;
+$font-size-sm: 14px;
+$font-size-xs: 13px;
+$line-height-base: rem(23px);
+
+
+$font-family-base:"OpenSans","arial",serif;
+
+$font-size-h1: rem(36px);
+$font-size-h2: rem(32px);
+$font-size-h3: rem(22px);
+$font-size-h4: rem(18px);
+$font-size-h5: rem(16px);
+$font-size-h6: rem(15px);
